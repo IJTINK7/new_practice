@@ -141,3 +141,33 @@
 // object1.address.house.flat = 17
 // console.log(object1.address.house.flat)
 // console.log(object2.address.house.flat)
+
+
+//---------------------------------------------------------------------------------------------------
+
+// Задание 1:
+// Поменяйте в object3 иммутабельно city: с "Moscow" на "Minsk":
+
+// let object3 = {...object1, address: {...object1.address, city: "Minsk"}}
+// console.log(object1)
+// console.log(object3)
+
+// Задание 2:
+// Поменяйте в object4 иммутабельно:
+// 1) name: с "Denis" на "Anton";
+// 2) street: с 'Pushkina' на 'Kirova'
+
+// let object4 = {...object1, name: "Anton", address: {...object1.address, street: "Kirova"}}
+// console.log(object1)
+// console.log(object4)
+
+
+// Задание 3:
+// Поменяйте в object5 иммутабельно:
+// 1) age: с 35 на 23;
+// 2) city: с 'Moscow' на 'Brest'
+// 3) flat:  с 11 на 15
+
+// let object5 = {...object1, age: 23, address: {...object1.address, city: "Brest", house: {...object1.address.house, flat: 15}}}
+// console.log(object1)
+// console.log(object5)
