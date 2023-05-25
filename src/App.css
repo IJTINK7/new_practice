@@ -1,10 +1,10 @@
 .App {
-  padding: 30px;
   display: flex;
+  flex-direction: column;
 }
 
 .App > div{
-  margin-right: 50px ;
+  margin: 20px auto;
 }
 
 .error{
