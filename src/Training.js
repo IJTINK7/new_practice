@@ -46,3 +46,42 @@
 // console.log(object2)
 // console.log("------------------------------------------")
 // console.log(object1=== object2)
+
+// 05 Проверка на изменение свойств объекта         // ОДНОГО И ТОГО ЖЕ!!!!
+
+// let object1 = {
+//     name: "Denis",
+//     age: 35,
+//     address: {
+//         city: "Moscow",
+//         street: "Pushkina",
+//         house: {
+//             number: 56,
+//             floor: "2-nd",
+//             flat: 11
+//         }
+//     },
+// };
+//
+// let object2 = object1;
+// console.log(object2)
+//
+//
+// object2.name = "Antony"
+// object2.age = 27;
+// object2.address.city = "London";
+// object2.address.house.flat = 13;
+//
+// console.log("-----------------------------------------------------------------------")
+// console.log(object1.address.city === "London")
+// console.log(object1.address.house.flat === 13)
+//
+// console.log("-----------------------------------------------------------------------")
+// console.log(object1)
+// console.log(object2)
+//
+//
+// console.log("-----------------------------------------------------------------------")
+// console.log(object1.address === object2.address)
+//
+// console.log("-------------------------------------------------------------")
