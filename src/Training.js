@@ -29,3 +29,20 @@
 // console.log("---------------------Поясните почему произошло так?---------------------")
 // human.isMarried = true;
 // console.log(human)
+
+// 04 Проверка на тот же самый объект
+// let object1 = {
+//     name: "Anton",
+//     age: 28,
+//     address: {
+//         city: "Minsk",
+//         street: "Kirova",
+//         house: 17
+//     },
+// };
+//
+// let object2 = object1;
+//
+// console.log(object2)
+// console.log("------------------------------------------")
+// console.log(object1=== object2)
