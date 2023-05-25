@@ -85,3 +85,59 @@
 // console.log(object1.address === object2.address)
 //
 // console.log("-------------------------------------------------------------")
+
+// 06 spread - Копирование объекта - 1 и 2 разные и по идее не зависимы друг от друга
+
+// let object1 = {
+//     name: "Denis",
+//     age: 35,
+//     address: {
+//         city: "Moscow",
+//         street: "Pushkina",
+//         house: {
+//             number: 56,
+//             floor: "2-nd",
+//             flat: 11
+//         }
+//     },
+// };
+
+
+// let object2 = {...object1}
+
+//
+// console.log(object2)
+//
+// console.log("-----------------------------------------------------------------------")
+// console.log(object2 === object1)
+// console.log("-----------------------------------------------------------------------")
+
+// console.log("-----------------------------------------------------------------------")
+// console.log(object1.age === object2.age)
+// console.log(object1.address.city === object2.address.city)
+// console.log(object1.address.house.flat)
+// console.log(object2.address.house.flat)
+// console.log(object1.address.house.flat === object2.address.house.flat)
+
+
+// console.log("-----------------------------------------------------------------------")
+//
+// object2.name = "Anton";
+// console.log(object1.name)
+// console.log(object2.name)
+
+
+
+// console.log("-----------------------Почему проблема? Перезапись города в первом?------------")
+// object2.address.city = "Minsk"
+// console.log(object1.address.city)
+// console.log(object2.address.city)
+
+// console.log("-----------------------------------------------------------------------")
+
+
+
+// console.log("-----------Почему произошла перезапись номера квартиры в первом?------------")
+// object1.address.house.flat = 17
+// console.log(object1.address.house.flat)
+// console.log(object2.address.house.flat)
