@@ -15,3 +15,17 @@
 //
 // console.log(human.name)
 // console.log(human["age"])
+
+// 03 Добавление свойств и Переприсваивание
+
+// let human = {
+//     name: "Anton",
+//     age: 28,
+// };
+//
+// human.isMarried = false;
+// console.log(human)
+//
+// console.log("---------------------Поясните почему произошло так?---------------------")
+// human.isMarried = true;
+// console.log(human)
