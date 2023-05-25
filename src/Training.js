@@ -5,3 +5,13 @@
 // let object1 = {};
 // let object2 = {};
 // console.log(object1 === object2)
+
+// 02 Обращение к значениям объекта по ключу
+
+// let human = {
+//     "name": "Anton",
+//     age: 28,
+// };
+//
+// console.log(human.name)
+// console.log(human["age"])
