@@ -200,7 +200,7 @@
 //
 // let array4 = //
 // console.log(array4)
-
+// console.log("----------------------------------------------------------------------------")
 
 // Задача вывести в консоль названия каждой модели телефона (title)
 // const wishes = [
@@ -213,6 +213,7 @@
 //
 // console.log(wishes.map(el => el.title))
 
+// console.log("----------------------------------------------------------------------------")
 
 // Задача вывести в консоль объекты, где значение checked - true
 
@@ -226,6 +227,9 @@
 //
 // console.log(wishes.filter(el => el.checked))
 
+// console.log("----------------------------------------------------------------------------")
+
+
 // Задача вывести в консоль объекты, где значение OS - "iOS"
 
 // const wishes = [
@@ -238,9 +242,18 @@
 //
 // console.log(wishes.filter(el => el.OS === "iOS"))
 
-
+// console.log("----------------------------------------------------------------------------")
 
 // Копирование:
+
+// Три главных правила:
+//     1) Видишь Объект - Делай копию!
+//     2) Видишь Массив - Делай копию!
+//     3) Видишь ключ - Создавай новый!
+// © Игорь =)
+
+// console.log("----------------------------------------------------------------------------")
+
 
 // const wishes = [
 //     {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
@@ -257,3 +270,127 @@
 // Замените checked с true на false, с false на true:
 // let changedWishes2 = wishes.map(el => ({...el, checked: !el.checked}));
 // console.log(changedWishes2);
+
+// console.log("----------------------------------------------------------------------------")
+
+
+// Замените в phones id:2 title с 'Huawei' на "Samsung Galaxy S7"
+
+/*const wishes = {
+    phones: [
+        {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+        {id: 2, title: 'Huawei', OS: "Android", checked: false},
+    ],
+    books: [
+        {id: 1, title: 'Dark Tower', Author: "Stephen King", price: 15},
+        {id: 2, title: 'Flowers for Algernon', Author: "Daniel Keyes", price: 12},
+    ],
+}
+
+console.log({...wishes, phones: wishes.phones.map(el => el.id === 2 ? {...el, title: "Samsung Galaxy S7"}: el)})
+
+console.log("----------------------------------------------------------------------------")*/
+
+// Замените в books в id:1 title с 'Dark Tower' на "IT"
+
+// const wishes = {
+//     phones: [
+//         {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+//         {id: 2, title: 'Huawei', OS: "Android", checked: false},
+//     ],
+//     books: [
+//         {id: 1, title: 'Dark Tower', Author: "Stephen King", price: 15},
+//         {id: 2, title: 'Flowers for Algernon', Author: "Daniel Keyes", price: 12},
+//     ],
+// }
+// console.log({...wishes, books: wishes.books.map(el => el.id === 1 ? {...el, title:"IT"}: el)})
+
+
+// console.log("----------------------------------------------------------------------------")
+
+
+// Замените в phones значение checked с true на false, с false на true:
+// Замените в books в id:2 price с 12 на 13
+
+
+// const wishes = {
+//     phones: [
+//         {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+//         {id: 2, title: 'Huawei', OS: "Android", checked: false},
+//     ],
+//     books: [
+//         {id: 1, title: 'Dark Tower', Author: "Stephen King", price: 15},
+//         {id: 2, title: 'Flowers for Algernon', Author: "Daniel Keyes", price: 12},
+//     ],
+// }
+//
+// console.log({...wishes,
+//     phones: wishes.phones.map(el => ({ ...el, checked: !el.checked })),
+//     books: wishes.books.map(el=> el.id === 2 ? {...el, price: 13}: el)
+// })
+
+
+
+// console.log("----------------------------------------------------------------------------")
+
+// Задача: Поменять 'JS' на "Typescript"
+
+// const tasks = {
+// 		["todolistID1"]: [
+// 			{id: 1, title: 'HTML&CSS', isDone: true},
+// 			{id: 2, title: 'JS', isDone: true},
+// 			{id: 3, title: 'ReactJS', isDone: false},
+// 			{id: 4, title: 'Rest API', isDone: false},
+// 			{id: 5, title: 'Graph SQL', isDone: false},
+// 		],
+// 		["todolistID2"]: [
+// 			{id: 6, title: 'Milk', isDone: true},
+// 			{id: 7, title: 'Fruits', isDone: true},
+// 			{id: 8, title: 'Nuts', isDone: true},
+// 			{id: 9, title: 'Bread', isDone: false},
+// 			{id: 10, title: 'Sugar', isDone: false},
+// 		]
+// 	}
+// console.log({...tasks, ["todolistID1"]: tasks["todolistID1"].map(el=> el.id === 2 ? {...el, title: "Typescript"} : el) })
+
+// Задача: Поменять в объекте с id: 8 и title: 'Nuts' значение isDone с 'true' на "false"
+
+// const tasks = {
+//     ["todolistID1"]: [
+//         {id: 1, title: 'HTML&CSS', isDone: true},
+//         {id: 2, title: 'JS', isDone: true},
+//         {id: 3, title: 'ReactJS', isDone: false},
+//         {id: 4, title: 'Rest API', isDone: false},
+//         {id: 5, title: 'Graph SQL', isDone: false},
+//     ],
+//     ["todolistID2"]: [
+//         {id: 6, title: 'Milk', isDone: true},
+//         {id: 7, title: 'Fruits', isDone: true},
+//         {id: 8, title: 'Nuts', isDone: true},
+//         {id: 9, title: 'Bread', isDone: false},
+//         {id: 10, title: 'Sugar', isDone: false},
+//     ]
+// }
+// console.log({...tasks,["todolistID2"]: tasks["todolistID2"].map(el => el.id === 8 ? {...el, isDone: false}: el)  })
+
+// Задача: Перерисовать все таски:
+// 1) В todolistID1 оставить только со значением false
+// 2) В todolistID2 оставить только со значением true
+
+// const tasks = {
+//     ["todolistID1"]: [
+//         {id: 1, title: 'HTML&CSS', isDone: false},
+//         {id: 2, title: 'JS', isDone: true},
+//         {id: 3, title: 'React', isDone: false},
+//         {id: 4, title: 'Rest API', isDone: true},
+//         {id: 5, title: 'Graph SQL', isDone: false},
+//     ],
+//     ["todolistID2"]: [
+//         {id: 6, title: 'Bread', isDone: false},
+//         {id: 7, title: 'Milk', isDone: true},
+//         {id: 8, title: 'Nuts', isDone: true},
+//         {id: 9, title: 'Fruits', isDone: true},
+//         {id: 10, title: 'Sugar', isDone: false},
+//     ]
+// }
+// console.log({...tasks,["todolistID1"]: tasks["todolistID1"].filter(el=> !el.isDone), ["todolistID2"]: tasks["todolistID2"].filter(el=> el.isDone)})
