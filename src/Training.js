@@ -201,3 +201,59 @@
 // let array4 = //
 // console.log(array4)
 
+
+// Задача вывести в консоль названия каждой модели телефона (title)
+// const wishes = [
+//     {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+//     {id: 2, title: 'Huawei', OS: "Android", checked: false},
+//     {id: 3, title: 'IPhone 13 ProMax', OS: "iOS", checked: true},
+//     {id: 4, title: 'Xiaomi 13', OS: "Android", checked: true},
+//     {id: 5, title: 'Iphone 14', OS: "iOS", checked: false},
+// ]
+//
+// console.log(wishes.map(el => el.title))
+
+
+// Задача вывести в консоль объекты, где значение checked - true
+
+// const wishes = [
+//     {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+//     {id: 2, title: 'Huawei', OS: "Android", checked: false},
+//     {id: 3, title: 'IPhone 13 ProMax', OS: "iOS", checked: true},
+//     {id: 4, title: 'Xiaomi 13', OS: "Android", checked: true},
+//     {id: 5, title: 'Iphone 14', OS: "iOS", checked: false},
+// ]
+//
+// console.log(wishes.filter(el => el.checked))
+
+// Задача вывести в консоль объекты, где значение OS - "iOS"
+
+// const wishes = [
+//     {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+//     {id: 2, title: 'Huawei', OS: "Android", checked: false},
+//     {id: 3, title: 'IPhone 13 ProMax', OS: "iOS", checked: true},
+//     {id: 4, title: 'Xiaomi 13', OS: "Android", checked: true},
+//     {id: 5, title: 'Iphone 14', OS: "iOS", checked: false},
+// ]
+//
+// console.log(wishes.filter(el => el.OS === "iOS"))
+
+
+
+// Копирование:
+
+// const wishes = [
+//     {id: 1, title: 'Samsung Galaxy S23', OS: "Android", checked: true},
+//     {id: 2, title: 'Huawei', OS: "Android", checked: false},
+//     {id: 3, title: 'IPhone 13 ProMax', OS: "iOS", checked: true},
+//     {id: 4, title: 'Xiaomi 13', OS: "Android", checked: true},
+//     {id: 5, title: 'Iphone 14', OS: "iOS", checked: false},
+// ]
+//
+// Увеличьте каждый Id на 1
+// let changedWishes1 = wishes.map(el => ({...el, id: el.id + 1}))
+// console.log(changedWishes1);
+//
+// Замените checked с true на false, с false на true:
+// let changedWishes2 = wishes.map(el => ({...el, checked: !el.checked}));
+// console.log(changedWishes2);
