@@ -174,3 +174,30 @@
 // let object5 = {...object1, age: 23, address: {...object1.address, city: "Brest", house: {...object1.address.house, flat: 15}}}
 // console.log(object1)
 // console.log(object5)
+
+
+
+// Массивы:
+
+// Доступ к элементам массива:
+
+// let array1 = [1, "Hi", true, 45, null, "Alex"]
+// console.log() // Выведите в консоль 46
+// console.log() Выведите в консоль строку "Hi, Alex"
+// console.log("--------------------------------------------")
+
+// let array2 = [2, -1, 23, 0, -9, 12, -7, 36, 49]
+//
+// let newArray = array2.map(el=>el)
+// console.log(newArray === array2) // Какой результат и почему?
+//
+// Задача: Увеличить каждый элемент массива array2 на 7,результат присвоить в переменную array3
+// let array3 = //
+// console.log(array3)
+
+// console.log("--------------------------------------------")
+//Задача: Вывести в консоль числа из массива array2, которые меньше -3, результат присвоить в переменную array4
+//
+// let array4 = //
+// console.log(array4)
+
