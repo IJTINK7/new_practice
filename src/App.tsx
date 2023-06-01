@@ -119,15 +119,15 @@ export default App;
 // export type FilterValuesType = "all" | "active" | "completed";
 // type TodolistsType = { id: string, title: string }
 // type TasksStateType = {
-//   [key: string]: EntryPointType;
+//   [key: string]: InCaseType;
 // }
-// type InCaseType = {
+// type EntryPointType = {
 //   data: Array<TaskType>;
 //   filter: FilterValuesType;
 // }
-// type EntryPointType = {
-//   entryPoint: InCaseType;
-//   hello: string
+// type InCaseType = {
+//   entryPoint: EntryPointType;
+//   completed: boolean
 // }
 //
 // function App() {
@@ -150,9 +150,9 @@ export default App;
 //           {id: v1(), title: 'Rest API', isDone: false},
 //           {id: v1(), title: 'Graph SQL', isDone: false},
 //         ],
-//         filter: "all"
+//         filter: "all",
 //       },
-//       hello: "hello"
+//       completed: true
 //     },
 //     [todolistId2]: {
 //       entryPoint: {
@@ -163,9 +163,9 @@ export default App;
 //           {id: v1(), title: 'Bread', isDone: false},
 //           {id: v1(), title: 'Sugar', isDone: false},
 //         ],
-//         filter: "all"
+//         filter: "all",
 //       },
-//       hello: "hello"
+//       completed: true,
 //     },
 //   });
 //
