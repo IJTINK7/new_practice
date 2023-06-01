@@ -1,3 +1,5 @@
+// EASY LEVEL
+
 import React, {useState} from 'react';
 import './App.css';
 import {Todolist} from './Todolist';
@@ -14,11 +16,13 @@ function App() {
   ]);
 
   function removeTask(taskID: string) {
-    // setTasks()
+    //setTasks()
   }
+
   function changeTaskStatus(taskId: string, isDone: boolean) {
-   // setTasks()
+    //setTasks()
   }
+
   return (
       <div className="App">
         <Todolist title="What to learn"
@@ -33,10 +37,8 @@ function App() {
 export default App;
 
 
-
-
 // MEDIUM LEVEL
-
+//
 // import React, {useState} from 'react';
 // import './App.css';
 // import {TaskType, Todolist} from './Todolist';
@@ -44,12 +46,12 @@ export default App;
 //
 // export type FilterValuesType = "all" | "active" | "completed";
 //
-// type TodolistsType ={
+// type TodolistsType = {
 //   id: string;
 //   title: string;
 //   filter: FilterValuesType;
 // }
-// type TasksType={
+// type TasksType = {
 //   [key: string]: Array<TaskType>
 // }
 //
@@ -79,23 +81,19 @@ export default App;
 //       {id: v1(), title: 'Sugar', isDone: false},
 //     ]
 //   })
+//
 //   function removeTask(todolistID: string, taskID: string) {
-//     setTasks({...tasks, [todolistID]: tasks[todolistID].filter(el => el.id !== taskID)});
+//     //setTasks();
 //   }
+//
 //   function changeStatus(todolistID: string, taskId: string, isDone: boolean) {
-//     setTasks({...tasks, [todolistID]: tasks[todolistID].map(el => el.id === taskId ?  {...el, isDone}: el)})
+//     //setTasks()
 //   }
 //
 //   return (
 //       <div className="App">
-//         {todolists.map(el=>{
+//         {todolists.map(el => {
 //           let tasksForTodolist = tasks[el.id];
-//           if (el.filter === "active") {
-//             tasksForTodolist = tasks[el.id].filter(t => !t.isDone);
-//           }
-//           if (el.filter === "completed") {
-//             tasksForTodolist = tasks[el.id].filter(t => t.isDone);
-//           }
 //           return <Todolist
 //               key={el.id}
 //               todolistID={el.id}
@@ -105,7 +103,95 @@ export default App;
 //               changeTaskStatus={changeStatus}
 //           />
 //         })}
+//       </div>
+//   );
+// }
 //
+// export default App;
+
+// HARD LEVEL
+//
+// import React, {useState} from 'react';
+// import './App.css';
+// import {TaskType, Todolist} from './Todolist';
+// import {v1} from 'uuid';
+//
+// export type FilterValuesType = "all" | "active" | "completed";
+// type TodolistsType = { id: string, title: string }
+// type TasksStateType = {
+//   [key: string]: EntryPointType;
+// }
+// type InCaseType = {
+//   data: Array<TaskType>;
+//   filter: FilterValuesType;
+// }
+// type EntryPointType = {
+//   entryPoint: InCaseType;
+//   hello: string
+// }
+//
+// function App() {
+//
+//   let todolistId1 = v1();
+//   let todolistId2 = v1();
+//
+//   let [todolists, setTodolists] = useState<Array<TodolistsType>>([
+//     {id: todolistId1, title: "What to learn"},
+//     {id: todolistId2, title: "What to buy"}
+//   ])
+//
+//   let [tasks, setTasks] = useState<TasksStateType>({
+//     [todolistId1]: {
+//       entryPoint: {
+//         data: [
+//           {id: v1(), title: 'HTML&CSS', isDone: true},
+//           {id: v1(), title: 'JS', isDone: true},
+//           {id: v1(), title: 'ReactJS', isDone: false},
+//           {id: v1(), title: 'Rest API', isDone: false},
+//           {id: v1(), title: 'Graph SQL', isDone: false},
+//         ],
+//         filter: "all"
+//       },
+//       hello: "hello"
+//     },
+//     [todolistId2]: {
+//       entryPoint: {
+//         data: [
+//           {id: v1(), title: 'Milk', isDone: true},
+//           {id: v1(), title: 'Fruits', isDone: true},
+//           {id: v1(), title: 'Nuts', isDone: true},
+//           {id: v1(), title: 'Bread', isDone: false},
+//           {id: v1(), title: 'Sugar', isDone: false},
+//         ],
+//         filter: "all"
+//       },
+//       hello: "hello"
+//     },
+//   });
+//
+//   function removeTask(todolistId: string, taskId: string) {
+//     //setTasks()
+//   }
+//
+//   function changeTaskStatus(todolistId: string, taskId: string, newIsDone: boolean) {
+//     //setTasks()
+//   }
+//
+//   return (
+//       <div className="App">
+//         {todolists.map((el) => {
+//           let tasksForTodolist = tasks[el.id].entryPoint.data;
+//           return (
+//               <Todolist
+//                   key={el.id}
+//                   todolistID={el.id}
+//                   title={el.title}
+//                   tasks={tasksForTodolist}
+//                   removeTask={removeTask}
+//                   changeTaskStatus={changeTaskStatus}
+//               />
+//           )
+//         })}
 //       </div>
 //   );
 // }

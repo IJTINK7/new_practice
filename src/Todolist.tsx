@@ -1,3 +1,4 @@
+// EASY LEVEL
 import React, {ChangeEvent} from 'react';
 
 type TaskType = {
@@ -21,7 +22,8 @@ export function Todolist(props: PropsType) {
 				props.tasks.map(t => {
 					const onClickHandler = () => props.removeTask(t.id)
 					const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-						props.changeTaskStatus(t.id, e.currentTarget.checked)}
+						props.changeTaskStatus(t.id, e.currentTarget.checked)
+					}
 					return <li key={t.id} className={t.isDone ? "is-done" : ""}>
 						<input type="checkbox"
 							   checked={t.isDone}
@@ -37,8 +39,9 @@ export function Todolist(props: PropsType) {
 }
 
 
-// MEDIUM LEVEL
-//import React, {ChangeEvent} from 'react';
+// MEDIUM LEVEL and HARD LEVEL
+//
+// import React, {ChangeEvent} from 'react';
 //
 // export type TaskType = {
 // 	id: string
