@@ -395,6 +395,36 @@
 // }
 // console.log()
 
+// Задача 4 (Hard):
+// С помощью логического оператора "И" (&&):
+// 1) В массиве по ключу ["todolistID1"] с id: 1 поменять title с 'HTML&CSS' на 'HTML + CSS + Bootstrap',
+// И по ключу ["todolistID1"] с id: 3 поменять title с 'React' на 'React + Typescript';
+
+// 2) В массиве по ключу ["todolistID2"] с id: 7 поменять title с 'Milk' на 'Watermelon',
+// // И по ключу ["todolistID2"] с id: 10 поменять title с 'Sugar' на 'Water';
+
+// const tasks = {
+//     ["todolistID1"]: [
+//         {id: 1, title: 'HTML&CSS', isDone: false},
+//         {id: 2, title: 'JS', isDone: true},
+//         {id: 3, title: 'React', isDone: false},
+//         {id: 4, title: 'Rest API', isDone: true},
+//         {id: 5, title: 'Graph SQL', isDone: false},
+//     ],
+//     ["todolistID2"]: [
+//         {id: 6, title: 'Bread', isDone: false},
+//         {id: 7, title: 'Milk', isDone: true},
+//         {id: 8, title: 'Nuts', isDone: true},
+//         {id: 9, title: 'Fruits', isDone: true},
+//         {id: 10, title: 'Sugar', isDone: false},
+//     ]
+// }
+//
+// let result = //
+//
+// console.log(tasks)
+// console.log(result)
+
 
 
 
