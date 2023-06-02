@@ -349,7 +349,8 @@
 //         {id: 10, title: 'Sugar', isDone: false},
 //     ]
 // }
-// console.log()
+// console.log(tasks)
+// console.log({...tasks, ["todolistID2"]:tasks["todolistID2"].map(el => el.id === 8 ? {...el, isDone: false}: el)})
 
 // Задача 2:
 // 1) В массиве по ключу ["todolistID1"] оставить таски только со значением false
@@ -371,7 +372,11 @@
 //         {id: 10, title: 'Sugar', isDone: false},
 //     ]
 // }
-// console.log()
+// console.log(tasks)
+// console.log({...tasks,
+//     ["todolistID1"]:tasks["todolistID1"].filter(el=> !el.isDone),
+//     ["todolistID2"]:tasks["todolistID2"].filter(el=>el.isDone)
+// })
 
 // Задача 3:
 // 1) В массиве по ключу ["todolistID1"] с id: 3 поменять title с 'React' на 'React + Typescript'
@@ -393,7 +398,11 @@
 //         {id: 10, title: 'Sugar', isDone: false},
 //     ]
 // }
-// console.log()
+// console.log(tasks)
+// console.log({...tasks,
+//     ["todolistID1"]:tasks["todolistID1"].map(el=> el.id === 3 ? {...el, title:'React + Typescript'}: el),
+//     ["todolistID2"]:tasks["todolistID2"].map(el=> el.id === 7 ? {...el, title:'Butter'}: el),
+// })
 
 // Задача 4 (Hard):
 // С помощью логического оператора "И" (&&):
@@ -402,7 +411,7 @@
 
 // 2) В массиве по ключу ["todolistID2"] с id: 7 поменять title с 'Milk' на 'Watermelon',
 // // И по ключу ["todolistID2"] с id: 10 поменять title с 'Sugar' на 'Water';
-
+//
 // const tasks = {
 //     ["todolistID1"]: [
 //         {id: 1, title: 'HTML&CSS', isDone: false},
@@ -419,8 +428,12 @@
 //         {id: 10, title: 'Sugar', isDone: false},
 //     ]
 // }
-//
-// let result = //
+// //
+// let result = {...tasks, ["todolistID1"]: tasks["todolistID1"].map(el => el.id === 1 ? {...el, title: 'HTML + CSS + Bootstrap'} : el &&
+//     el.id === 3 ? {...el, title: 'React + Typescript'} : el),
+//     ["todolistID2"]: tasks["todolistID2"].map(el => el.id === 7 ? {...el, title: 'Watermelon'} : el &&
+//     el.id === 10 ? {...el, title: 'Water'} : el)
+// }
 //
 // console.log(tasks)
 // console.log(result)

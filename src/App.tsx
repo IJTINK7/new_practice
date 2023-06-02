@@ -15,11 +15,11 @@ function App() {
 	]);
 
 	function removeTask(taskID: string) {
-		//setTasks()
+		setTasks(tasks.filter(el=> el.id !==taskID))
 	}
 
 	function changeTaskStatus(taskId: string, isDone: boolean) {
-		//setTasks()
+		setTasks(tasks.map(el=>el.id === taskId ? {...el, isDone} : el))
 	}
 
 	return (
@@ -70,7 +70,6 @@ export default App;
 //       {id: v1(), title: 'ReactJS', isDone: false},
 //       {id: v1(), title: 'Rest API', isDone: false},
 //       {id: v1(), title: 'Graph SQL', isDone: false},
-//
 //     ],
 //     [todolistID2]: [
 //       {id: v1(), title: 'Milk', isDone: true},
@@ -82,11 +81,11 @@ export default App;
 //   })
 //
 //   function removeTask(todolistID: string, taskID: string) {
-//     //setTasks();
+// 	  setTasks({...tasks,[todolistID]:tasks[todolistID].filter(el=>el.id !== taskID) })
 //   }
 //
 //   function changeStatus(todolistID: string, taskId: string, isDone: boolean) {
-//     //setTasks()
+//       setTasks({...tasks, [todolistID]:tasks[todolistID].map(el=> el.id === taskId ? {...el, isDone} : el )})
 //   }
 //
 //   return (
@@ -109,7 +108,7 @@ export default App;
 // export default App;
 
 // // HARD LEVEL
-
+//
 // import React, {useState} from 'react';
 // import './App.css';
 // import {TaskType, WishList} from './WishList';
@@ -167,13 +166,16 @@ export default App;
 //       completed: true,
 //     },
 //   });
-//
 //   function removeTask(todolistId: string, taskId: string) {
-//     //setTasks()
+//     setTasks({...tasks, [todolistId]: {...tasks[todolistId], entryPoint: {...tasks[todolistId].entryPoint, data:
+//     tasks[todolistId].entryPoint.data.filter(el=>el.id !== taskId )
+//     } } })
 //   }
 //
 //   function changeTaskStatus(todolistId: string, taskId: string, newIsDone: boolean) {
-//     //setTasks()
+//     setTasks({...tasks, [todolistId]: {...tasks[todolistId], entryPoint: {...tasks[todolistId].entryPoint, data:
+//        tasks[todolistId].entryPoint.data.map(el => el.id === taskId ? {...el, isDone: newIsDone} : el )
+//     }}})
 //   }
 //
 //   return (
