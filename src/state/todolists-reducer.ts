@@ -45,3 +45,6 @@ export const RemoveTodolistAC = (todolistId: string): RemoveTodolistActionType =
 export const AddTodolistAC = (newTodolistTitle: string): AddTodolistActionType => {
 	return {type: 'ADD-TODOLIST', title: newTodolistTitle}
 }
+export const ChangeTodolistTitleAC = (todolistID: string, newTodolistTitle: string): ChangeTodolistTitleActionType => {
+	return {type: 'CHANGE-TODOLIST-TITLE', id: todolistID, title: newTodolistTitle}
+}
