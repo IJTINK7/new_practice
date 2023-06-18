@@ -13,8 +13,8 @@ export const Site = () => {
             <div className={styles.body}>
                 <div className={styles.nav}>
                     <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/0"}>Page1</NavLink></div>
-                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/12345"}>Page2</NavLink></div>
-                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/hohoho"}>Page3</NavLink></div>
+                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/1"}>Page2</NavLink></div>
+                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/2"}>Page3</NavLink></div>
                 </div>
                 <div className={styles.content}>
                    <Routes>
