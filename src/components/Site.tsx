@@ -1,9 +1,9 @@
 import React from 'react';
 import {Navigate, NavLink, Route, Routes} from 'react-router-dom';
 import styles from './Site.module.css'
-import {Error404} from "./pages/Error404";
 import {Page} from "./pages/Page";
 import {dataState} from "./dataState/dataState";
+import {Error404} from "./pages/Error404";
 
 
 export const Site = () => {
@@ -20,10 +20,9 @@ export const Site = () => {
                    <Routes>
                         <Route path={"/"} element={<Navigate to={"/page/0"}/>}/>
                         <Route path={"/page/:stolenID"} element={<Page pages={dataState.pages}/>}/>
-                        <Route path={"/page/:stolenID"} element={<Page pages={dataState.pages}/>}/>
-                        <Route path={"/page/:stolenID"} element={<Page pages={dataState.pages}/>}/>
-                        <Route path={"/*"} element={<Error404/>}/>
+                       <Route path={"/*"} element={<Error404/>}/>
                    </Routes>
+
                 </div>
             </div>
         </div>
