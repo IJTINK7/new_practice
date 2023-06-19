@@ -1,3 +1,10 @@
+export type PagesType ={
+	heading: number
+	about: number
+}
+export type DataStateType = {
+	pages: PagesType[]
+}
 export const dataState: DataStateType = {
 	pages: [
 		{
@@ -13,13 +20,4 @@ export const dataState: DataStateType = {
 			about: 333,
 		},
 	],
-}
-
-export type DataStateType={
-	pages: PagesType[]
-}
-
-export type PagesType={
-	heading: number
-	about: number
 }

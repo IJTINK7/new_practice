@@ -1,7 +1,5 @@
 import React from 'react';
-import './App.css';
 import {Site} from "./components/Site";
-
 
 function App() {
     return (
@@ -10,6 +8,4 @@ function App() {
         </div>
     );
 }
-
-
 export default App;
