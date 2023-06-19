@@ -4,6 +4,7 @@ import styles from './Site.module.css'
 import {Page} from "./pages/Page";
 import {dataState} from "./dataState/dataState";
 import {Error404} from "./pages/Error404";
+import styled from "styled-components";
 
 
 export const Site = () => {
@@ -12,9 +13,9 @@ export const Site = () => {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/0"}>Page1</NavLink></div>
-                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/1"}>Page2</NavLink></div>
-                    <div><NavLink className={({isActive})=>isActive ? styles.active : styles.navLink} to={"/page/2"}>Page3</NavLink></div>
+                    <NavWrapper><NavLink to={"/page/0"}>Page1</NavLink></NavWrapper>
+                    <NavWrapper><NavLink to={"/page/1"}>Page2</NavLink></NavWrapper>
+                    <NavWrapper><NavLink to={"/page/2"}>Page3</NavLink></NavWrapper>
                 </div>
                 <div className={styles.content}>
                    <Routes>
@@ -29,3 +30,19 @@ export const Site = () => {
     );
 };
 
+const NavWrapper = styled.div `
+	margin-left: 10px;
+	font-size: 35px;
+
+& > a {
+	text-decoration: none;
+	color: #1e3786;
+}
+& > a.active {
+	text-decoration: none;
+	color: #03eaff;
+}
+& > a:hover {
+	color: steelblue;
+}
+`
