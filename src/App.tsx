@@ -1,10 +1,10 @@
 import React from 'react';
-import {Site} from "./components/Site";
+import {Outlet} from "@mui/icons-material";
 
 function App() {
     return (
         <div>
-            <Site/>
+            <Outlet/>
         </div>
     );
 }
