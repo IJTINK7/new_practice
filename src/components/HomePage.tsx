@@ -1,11 +1,8 @@
 import React from 'react';
+import {ContentPropsType} from "./Content";
 
-type HomePagePropsType = {
-	heading: number
-	about: number
-}
 
-export const HomePage = (props: HomePagePropsType) => {
+export const HomePage = (props:ContentPropsType) => {
 	return (
 		<div>
 			<div>{props.heading}</div>
